@@ -39,7 +39,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <a href="#" className="text-xl font-semibold tracking-tight">
-          Dhruman<span className="text-accent">Raptor</span>
+          Dhruman<span className="text-accent">Rathod</span>
         </a>
 
         {/* Desktop Navigation */}

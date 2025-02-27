@@ -34,7 +34,7 @@ const About = () => {
               <div className="w-full h-[480px] rounded-2xl overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" 
-                  alt="Dhruman Raptor" 
+                  alt="Dhruman Rathod" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -62,7 +62,7 @@ const About = () => {
             </div>
             
             <p className="text-foreground/80 leading-relaxed">
-              I'm Dhruman Raptor, a passionate technologist specializing in artificial intelligence and digital innovation. With a background in both theoretical AI research and practical implementation, I create solutions that push the boundaries of what's possible.
+              I'm Dhruman Rathod, a passionate technologist specializing in artificial intelligence and digital innovation. With a background in both theoretical AI research and practical implementation, I create solutions that push the boundaries of what's possible.
             </p>
             
             <p className="text-foreground/80 leading-relaxed">

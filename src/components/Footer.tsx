@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <div className="flex items-center">
               <a href="#" className="text-xl font-semibold tracking-tight">
-                Dhruman<span className="text-accent">Raptor</span>
+                Dhruman<span className="text-accent">Rathod</span>
               </a>
             </div>
             <p className="text-sm text-foreground/60 mt-2">
@@ -54,7 +54,7 @@ const Footer = () => {
         
         <div className="border-t border-border/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-foreground/60">
-            © {currentYear} Dhruman Raptor. All rights reserved.
+            © {currentYear} Dhruman Rathod. All rights reserved.
           </p>
           
           <p className="text-sm text-foreground/60 mt-2 md:mt-0">

@@ -43,25 +43,25 @@ const Contact = () => {
     { 
       icon: <Mail className="w-5 h-5" />, 
       label: "Email",
-      value: "contact@dhrumanraptor.com",
-      href: "mailto:contact@dhrumanraptor.com"
+      value: "contact@dhrumanrathod.com",
+      href: "mailto:contact@dhrumanrathod.com"
     },
     { 
       icon: <Github className="w-5 h-5" />, 
       label: "Github",
-      value: "github.com/dhrumanraptor",
+      value: "github.com/dhrumanrathod",
       href: "https://github.com/"
     },
     { 
       icon: <Linkedin className="w-5 h-5" />, 
       label: "LinkedIn",
-      value: "linkedin.com/in/dhrumanraptor",
+      value: "linkedin.com/in/dhrumanrathod",
       href: "https://linkedin.com/"
     },
     { 
       icon: <Twitter className="w-5 h-5" />, 
       label: "Twitter",
-      value: "@dhrumanraptor",
+      value: "@dhrumanrathod",
       href: "https://twitter.com/"
     },
     { 

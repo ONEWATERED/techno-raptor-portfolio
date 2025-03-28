@@ -86,24 +86,16 @@ export const Navbar = ({ showAuth = true }: NavbarProps) => {
               </a>
             ))}
 
-            {showAuth && (
-              <>
-                {isAuthenticated ? (
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={handleLogout}
-                    className="flex items-center space-x-1"
-                  >
-                    <LogOut className="h-4 w-4" />
-                    <span>Logout</span>
-                  </Button>
-                ) : (
-                  <Link to="/login">
-                    <Button variant="ghost" size="sm">Login</Button>
-                  </Link>
-                )}
-              </>
+            {showAuth && isAuthenticated && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleLogout}
+                className="flex items-center space-x-1"
+              >
+                <LogOut className="h-4 w-4" />
+                <span>Logout</span>
+              </Button>
             )}
           </div>
         </div>
@@ -136,24 +128,14 @@ export const Navbar = ({ showAuth = true }: NavbarProps) => {
             </a>
           ))}
 
-          {showAuth && (
-            <>
-              {isAuthenticated ? (
-                <Button
-                  variant="ghost"
-                  onClick={handleLogout}
-                  className="text-xl font-medium hover:text-accent transition-colors"
-                >
-                  Logout
-                </Button>
-              ) : (
-                <Link to="/login" onClick={() => setIsOpen(false)}>
-                  <Button variant="ghost" className="text-xl font-medium hover:text-accent transition-colors">
-                    Login
-                  </Button>
-                </Link>
-              )}
-            </>
+          {showAuth && isAuthenticated && (
+            <Button
+              variant="ghost"
+              onClick={handleLogout}
+              className="text-xl font-medium hover:text-accent transition-colors"
+            >
+              Logout
+            </Button>
           )}
         </div>
 

@@ -95,6 +95,9 @@ export default {
 				'pulse-light': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' }
+				},
+				'ping': {
+					'75%, 100%': { transform: 'scale(1.5)', opacity: '0' },
 				}
 			},
 			animation: {
@@ -106,7 +109,8 @@ export default {
 				'slide-up': 'slide-up 0.7s ease-out',
 				'slide-right': 'slide-right 0.7s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse-light': 'pulse-light 3s ease-in-out infinite'
+				'pulse-light': 'pulse-light 3s ease-in-out infinite',
+				'ping': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],

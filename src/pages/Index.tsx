@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import DigitalClone from "@/components/DigitalClone";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ChatButton from "@/components/ChatButton";
 
 const Index = () => {
   useEffect(() => {
@@ -42,6 +43,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <ChatButton />
     </div>
   );
 };

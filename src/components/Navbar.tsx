@@ -1,19 +1,11 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Menu, X, Github, Linkedin, Twitter, LogOut } from "lucide-react";
-import { useAuth } from "@/contexts/AuthContext";
-import { Button } from "@/components/ui/button";
+import { Menu, X, Github, Linkedin, Twitter } from "lucide-react";
 
-interface NavbarProps {
-  showAuth?: boolean;
-}
-
-export const Navbar = ({ showAuth = true }: NavbarProps) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { user, isAuthenticated, logout } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,10 +30,6 @@ export const Navbar = ({ showAuth = true }: NavbarProps) => {
     { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/' }
   ];
 
-  const handleLogout = () => {
-    logout();
-  };
-
   return (
     <nav 
       className={cn(
@@ -50,14 +38,9 @@ export const Navbar = ({ showAuth = true }: NavbarProps) => {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="text-xl font-semibold tracking-tight">
+        <a href="#" className="text-xl font-semibold tracking-tight">
           Dhruman<span className="text-accent">Rathod</span>
-          {isAuthenticated && user && (
-            <span className="ml-2 text-xs px-2 py-1 bg-accent/10 text-accent rounded-full">
-              {user.role}
-            </span>
-          )}
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
@@ -85,18 +68,6 @@ export const Navbar = ({ showAuth = true }: NavbarProps) => {
                 {link.icon}
               </a>
             ))}
-
-            {showAuth && isAuthenticated && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleLogout}
-                className="flex items-center space-x-1"
-              >
-                <LogOut className="h-4 w-4" />
-                <span>Logout</span>
-              </Button>
-            )}
           </div>
         </div>
 
@@ -127,16 +98,6 @@ export const Navbar = ({ showAuth = true }: NavbarProps) => {
               {link.name}
             </a>
           ))}
-
-          {showAuth && isAuthenticated && (
-            <Button
-              variant="ghost"
-              onClick={handleLogout}
-              className="text-xl font-medium hover:text-accent transition-colors"
-            >
-              Logout
-            </Button>
-          )}
         </div>
 
         <div className="flex items-center space-x-6 pt-6">

@@ -2,16 +2,11 @@
 import { useState, useEffect } from "react";
 import { Bot, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useAuth } from "@/contexts/AuthContext";
 
 const ChatButton = () => {
-  const { user } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  
-  // Only show for admin users
-  const showChatButton = user?.role === "admin";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,8 +25,6 @@ const ChatButton = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
-
-  if (!showChatButton) return null;
 
   return (
     <>

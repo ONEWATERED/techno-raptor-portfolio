@@ -1,7 +1,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-type UserRole = "guest" | "user" | "vendor" | "admin";
+export type UserRole = "guest" | "user" | "vendor" | "admin";
 
 interface AuthUser {
   id: string;
